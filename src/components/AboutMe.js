@@ -1,3 +1,4 @@
+//AboutMe.js
 import React from 'react';
 
 const aboutMeContent = {
@@ -8,7 +9,6 @@ const aboutMeContent = {
 const AboutMe = () => {
     return (
         <div className="container-custom">
-            <h1 className="text-4xl font-bold">About Me</h1>
             <div className="mt-4 space-y-3">
                 <p>{aboutMeContent.intro}</p>
                 <p>{aboutMeContent.bio}</p>

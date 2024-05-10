@@ -9,6 +9,9 @@ const projects = [
     { id: 1, title: "Project 4", description: "Description", link: "https://github.com/megamike1440p/portfolio" },
     { id: 2, title: "Project 5", description: "Description", link: "https://github.com/megamike1440p/portfolio" },
     { id: 3, title: "Project 6", description: "Description", link: "https://github.com/megamike1440p/portfolio" },
+    { id: 2, title: "Project 7", description: "Description", link: "https://github.com/megamike1440p/portfolio" },
+    { id: 3, title: "Project 8", description: "Description", link: "https://github.com/megamike1440p/portfolio" },
+    
 ];
 
 const ProjectList = () => {
