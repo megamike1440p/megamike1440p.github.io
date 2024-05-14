@@ -11,7 +11,7 @@ const ProjectModal = ({ project, onClose }) => {
 
     const handleClose = () => {
         setIsVisible(false);
-        setTimeout(onClose, 300); // Wait for the fade-out animation to finish
+        setTimeout(onClose, 300);
     };
 
     const handleOverlayClick = (e) => {
@@ -20,7 +20,7 @@ const ProjectModal = ({ project, onClose }) => {
         }
     };
 
-    if (!project) return null; // Return null if no project is passed
+    if (!project) return null;
 
     return (
         <div className={`modal-overlay ${isVisible ? 'fade-in' : 'fade-out'}`} onClick={handleOverlayClick}>
