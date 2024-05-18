@@ -1,3 +1,4 @@
+/*index.css*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -158,14 +159,55 @@ body {
     animation: flash 0.75s 2;
 }
 
+/* Course modal styles */
+.modal-open-button {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4;
+}
+
+.modal-category {
+    @apply mt-4 text-left mx-auto; /* Center the category section */
+    max-width: 90%;
+}
+
+.modal-subtitle {
+    @apply text-xl font-bold mt-4;
+}
+
+.modal-list {
+    @apply list-disc pl-5 mt-2 ml-0;
+}
+
+.modal-list-item {
+    @apply text-left;
+}
+
+/* EducationModal styles */
+.education-modal-overlay {
+    z-index: 1001;
+    @apply fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center overflow-y-auto;
+    padding: 1rem;
+    padding-top: 5rem;
+    transition: opacity 0.3s ease;
+}
+
+.education-modal-content {
+    @apply bg-gradient-to-br from-blue-800 to-blue-600 rounded-lg shadow-lg p-4 w-full mx-auto text-white;
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto; 
+    max-width: fit-content;
+}
+
 /* ProjectModal styles */
 .modal-overlay {
     @apply fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50;
+    z-index: 1001;
     transition: opacity 0.3s ease;
 }
 
 .modal-content {
     @apply bg-gradient-to-br from-blue-800 to-blue-600 rounded-lg shadow-lg p-4 max-w-3xl w-full mx-4 text-white;
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
 }
 
 .modal-close-button {
@@ -187,6 +229,7 @@ body {
 .modal-link {
     @apply inline-block mt-4 bg-blue-500 hover:bg-blue-700 rounded px-4 py-2;
 }
+
 
 /* Fade-in and fade-out animations */
 .fade-in {

@@ -1,15 +1,50 @@
-//Home.js
+// Home.js
 import React, { useState, useEffect } from 'react';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
 import Collapse from './Collapse';
 import Placeholder from './Placeholder';
 import NavBar from './NavBar';
+import EducationModal from './EducationModal';
 
 const Home = () => {
     const [openSections, setOpenSections] = useState({});
     const [navbarHeight, setNavbarHeight] = useState(0);
-    
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const courses = {
+        "Core Computer Science Courses": [
+            "Intro Computer Organization",
+            "Discrete Structures",
+            "Algorithm and Program Design",
+            "Data Structures & Algorithms I & II",
+            "Theory of Computation",
+            "Systems & Networks I & II"
+        ],
+        "Software Engineering Courses": [
+            "Software Engineering I & II",
+            "Software Engineering Management",
+            "Capstone Project"
+        ],
+        "Programming and Development Courses": [
+            "Intermediate Programming",
+            "Advanced Computer Programming",
+            "Program Languages",
+            "Server-Side Programming",
+            "C++ Programming"
+        ],
+        "Database and Data Science Courses": [
+            "Database Systems",
+            "Data Mining"
+        ],
+        "Mathematics and Science Courses": [
+            "Linear Algebra",
+            "Introduction to Mathematical Statistics I",
+            "Analytic Geometry & Calculus I & II",
+            "Calculus-Based Physics I & II with Lab"
+        ]
+    };
+
     useEffect(() => {
         const navbar = document.querySelector('.navbar');
         if (navbar) {
@@ -54,7 +89,23 @@ const Home = () => {
                     <AboutMe />
                 </Collapse>
                 <Collapse title="Education History" id="EducationHistory" isOpen={openSections['EducationHistory']} onToggle={() => handleSectionToggle('EducationHistory', false)}>
-                    <Placeholder />
+                    <div>
+                        <p>
+                            <strong>University of West Florida (UWF)</strong><br/>
+                            Bachelor of Science in Computer Science<br/>
+                            Spring 2021 - Spring 2024
+                        </p>
+                        <p>
+                            <strong>Pensacola State College (PSC)</strong><br/>
+                            Associate of Arts<br/>
+                            Spring/Summer 2019 - Fall 2020
+                        </p>
+                        <p>
+                            <strong>U.S. Navy Training</strong><br/>
+                            Summer 2013 - Summer 2014
+                        </p>
+                        <button onClick={() => setIsModalOpen(true)} className="modal-open-button">View Complete Course List</button>
+                    </div>
                 </Collapse>
                 <Collapse title="Professional History" id="ProfessionalHistory" isOpen={openSections['ProfessionalHistory']} onToggle={() => handleSectionToggle('ProfessionalHistory', false)}>
                     <Placeholder />
@@ -66,6 +117,7 @@ const Home = () => {
                     <Projects />
                 </Collapse>
             </div>
+            {isModalOpen && <EducationModal courses={courses} onClose={() => setIsModalOpen(false)} />}
         </div>
     );
 }
