@@ -28,12 +28,12 @@ const ProjectModal = ({ project, onClose }) => {
                 <div className="relative">
                     <button onClick={handleClose} className="modal-close-button">✕</button>
                     <h1 className="modal-title">{project.title}</h1>
+                    <p className="modal-description">{project.fullDescription}</p>
+                    {project.images && project.images.map((image, index) => (
+                        <img key={index} src={image} alt={project.title} className="modal-image" />
+                    ))}
+                    <a href={project.link} className="modal-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                 </div>
-                <p className="modal-description">{project.description}</p>
-                {project.images && project.images.map((img, index) => (
-                    <img key={index} src={img} alt={`Screenshot of ${project.title}`} className="modal-image"/>
-                ))}
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="modal-link">View on GitHub</a>
             </div>
         </div>
     );

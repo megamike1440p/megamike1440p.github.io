@@ -11,7 +11,7 @@ const EducationModal = ({ courses, onClose }) => {
 
     const handleClose = () => {
         setIsVisible(false);
-        setTimeout(onClose, 300);
+        setTimeout(onClose, 300); // Matches the duration of the fade-out transition
     };
 
     const handleOverlayClick = (e) => {
@@ -24,21 +24,25 @@ const EducationModal = ({ courses, onClose }) => {
 
     return (
         <div className={`education-modal-overlay ${isVisible ? 'fade-in' : 'fade-out'}`} onClick={handleOverlayClick}>
-            <div className="education-modal-content">
+            <div className="education-modal-content text-center" onClick={e => e.stopPropagation()}>
                 <div className="relative">
                     <button onClick={handleClose} className="modal-close-button">✕</button>
-                    <h1 className="modal-title">Complete Course List</h1>
+                    <h1 className="modal-title">Course List (UWF)</h1>
                 </div>
-                {Object.keys(courses).map((category, index) => (
-                    <div key={index} className="modal-category">
-                        <h2 className="modal-subtitle">{category}</h2>
-                        <ul className="modal-list">
-                            {courses[category].map((course, i) => (
-                                <li key={i} className="modal-list-item">{course}</li>
-                            ))}
-                        </ul>
+                <div className="flex flex-col items-center">
+                    <div className="inline-block text-left">
+                        {Object.keys(courses).map((category, index) => (
+                            <div key={index} className="modal-category mb-4">
+                                <h2 className="modal-subtitle mb-2">{category}</h2>
+                                <ul className="modal-list list-disc list-inside">
+                                    {courses[category].map((course, i) => (
+                                        <li key={i} className="modal-list-item text-lg">{course}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
                     </div>
-                ))}
+                </div>
             </div>
         </div>
     );

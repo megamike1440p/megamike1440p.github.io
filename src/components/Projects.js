@@ -1,4 +1,3 @@
-// Projects.js
 import React, { useState } from 'react';
 import ProjectList from './ProjectList';
 import ProjectModal from './ProjectModal';
@@ -18,7 +17,7 @@ const Projects = () => {
         <div className="container-custom">
             <p className="mt-4">Here are some of the projects I have created and worked on over the course of my education.</p>
             <ProjectList onProjectSelect={handleProjectSelect} />
-            <ProjectModal project={selectedProject} onClose={handleCloseModal} />
+            {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
         </div>
     );
 };

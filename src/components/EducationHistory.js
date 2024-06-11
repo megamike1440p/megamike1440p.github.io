@@ -1,47 +1,68 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import EducationModal from './EducationModal';
 
-const EducationModal = ({ courses, onClose }) => {
-    const [isVisible, setIsVisible] = useState(false);
+const EducationHistory = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    useEffect(() => {
-        if (courses) {
-            setIsVisible(true);
-        }
-    }, [courses]);
-
-    const handleClose = () => {
-        setIsVisible(false);
-        setTimeout(onClose, 300);
+    const courses = {
+        "Computer Science Theory": [
+            "Intro Computer Organization",
+            "Discrete Structures",
+            "Algorithm and Program Design",
+            "Data Structures & Algorithms I & II",
+            "Theory of Computation",
+            "Systems & Networks I & II"
+        ],
+        "Software Engineering": [
+            "Software Engineering I & II",
+            "Software Engineering Management",
+            "Capstone Project"
+        ],
+        "Programming and Development": [
+            "Intermediate Programming",
+            "Advanced Computer Programming",
+            "Program Languages",
+            "Server-Side Programming",
+            "C++ Programming"
+        ],
+        "Database and Data Science": [
+            "Database Systems",
+            "Data Mining"
+        ],
+        "Math and Science": [
+            "Linear Algebra",
+            "Introduction to Mathematical Statistics I",
+            "Analytic Geometry & Calculus I & II",
+            "Calculus-Based Physics I & II with Lab"
+        ]
     };
-
-    const handleOverlayClick = (e) => {
-        if (e.target === e.currentTarget) {
-            handleClose();
-        }
-    };
-
-    if (!courses) return null;
 
     return (
-        <div className={`education-modal-overlay ${isVisible ? 'fade-in' : 'fade-out'}`} onClick={handleOverlayClick}>
-            <div className="education-modal-content">
-                <div className="relative">
-                    <button onClick={handleClose} className="modal-close-button">✕</button>
-                    <h1 className="modal-title">Complete Course List</h1>
-                </div>
-                {Object.keys(courses).map((category, index) => (
-                    <div key={index} className="modal-category">
-                        <h2 className="modal-subtitle">{category}</h2>
-                        <ul className="modal-list">
-                            {courses[category].map((course, i) => (
-                                <li key={i} className="modal-list-item">{course}</li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
+        <div className="container-custom text-center">
+            <div className="mb-8">
+                <br/>
+                <h2 className="text-2xl font-bold mb-0">University of West Florida (UWF)</h2>
+                <p className="text-lg mb-0">Bachelor of Science in Computer Science</p>
+                <p className="text-sm text-gray-400 mb-0">Spring 2021 - Spring 2024</p>
             </div>
+            <div className="mb-8">
+                <h2 className="text-2xl font-bold mb-0">Pensacola State College (PSC)</h2>
+                <p className="text-lg mb-0">Associate of Arts</p>
+                <p className="text-sm text-gray-400 mb-0">Summer 2019 - Fall 2020</p>
+            </div>
+            <div className="mb-8">
+                <h2 className="text-2xl font-bold mb-0">Technical Military Training (NAVY)</h2>
+                <p className="text-lg mb-0">Advanced Technical Training</p>
+                <p className="text-lg mb-0">Fire Controlman 'A' School</p>
+                <p className="text-lg mb-0">Fire Controlman 'C' School - Aegis Fire Control Systems</p>
+                <p className="text-sm text-gray-400 mb-0">Summer 2013 - Summer 2014</p>
+            </div>
+            <div className="text-center">
+                <button onClick={() => setIsModalOpen(true)} className="modal-open-button">Computer Science Relevant Course List</button>
+            </div>
+            {isModalOpen && <EducationModal courses={courses} onClose={() => setIsModalOpen(false)} />}
         </div>
     );
 };
 
-export default EducationModal;
+export default EducationHistory;
