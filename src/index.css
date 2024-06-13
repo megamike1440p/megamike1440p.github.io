@@ -237,7 +237,7 @@ body {
 }
 
 .modal-image {
-    @apply rounded mt-4 max-h-80 w-full object-cover;
+    @apply rounded mt-4 max-h-80 w-full object-contain;
 }
 
 .modal-link {
