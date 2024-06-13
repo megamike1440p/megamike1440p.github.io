@@ -5,7 +5,7 @@ const ProjectTile = ({ project, onSelect }) => {
         <div onClick={() => onSelect(project)} className="project-tile group">
             <div className="project-content">
                 <h2 className="project-title">{project.title}</h2>
-                <p className="project-description">{project.description}</p>
+                <p className="project-description">{project.shortDescription}</p>
             </div>
         </div>
     );

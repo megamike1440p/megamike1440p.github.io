@@ -1,15 +1,17 @@
-//Home.js
 import React, { useState, useEffect } from 'react';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
 import Collapse from './Collapse';
 import Placeholder from './Placeholder';
 import NavBar from './NavBar';
+import EducationHistory from './EducationHistory';
+import TechnicalSkills from './TechnicalSkills';
+import ProfessionalHistory from './ProfessionalHistory';
 
 const Home = () => {
     const [openSections, setOpenSections] = useState({});
     const [navbarHeight, setNavbarHeight] = useState(0);
-    
+
     useEffect(() => {
         const navbar = document.querySelector('.navbar');
         if (navbar) {
@@ -23,7 +25,7 @@ const Home = () => {
             ...prev,
             [sectionId]: fromNavBar ? true : !prev[sectionId]
         }));
-    
+
         if (fromNavBar) {
             const delay = !isAlreadyOpen ? 450 : 0;
             setTimeout(() => {
@@ -54,13 +56,13 @@ const Home = () => {
                     <AboutMe />
                 </Collapse>
                 <Collapse title="Education History" id="EducationHistory" isOpen={openSections['EducationHistory']} onToggle={() => handleSectionToggle('EducationHistory', false)}>
-                    <Placeholder />
+                    <EducationHistory />
                 </Collapse>
                 <Collapse title="Professional History" id="ProfessionalHistory" isOpen={openSections['ProfessionalHistory']} onToggle={() => handleSectionToggle('ProfessionalHistory', false)}>
-                    <Placeholder />
+                    <ProfessionalHistory />
                 </Collapse>
                 <Collapse title="Technical Skills" id="TechnicalSkills" isOpen={openSections['TechnicalSkills']} onToggle={() => handleSectionToggle('TechnicalSkills', false)}>
-                    <Placeholder />
+                    <TechnicalSkills />
                 </Collapse>
                 <Collapse title="Projects" id="Projects" isOpen={openSections['Projects']} onToggle={() => handleSectionToggle('Projects', false)}>
                     <Projects />
@@ -69,4 +71,5 @@ const Home = () => {
         </div>
     );
 }
+
 export default Home;
