@@ -17,29 +17,14 @@ const ProjectList = ({ onProjectSelect }) => {
             shortDescription: "Simulates and analyzes queuing models based on user input.",
             fullDescription: "This project is an analytical model simulation designed to demonstrate the use of object-oriented design, data structures, and mathematical modeling in C++. It analyzes queuing models to calculate various metrics such as the probability of zero customers in the system, the average number of customers in the system, the average time a customer spends in the system, the average number of customers in the queue, and the average time a customer spends waiting in the queue. It handles user input, event management, and scheduling using a priority queue.",
             link: "https://github.com/megamike1440p/dsa2project2",
-            images: ['P2.png']
+            images: [`${process.env.PUBLIC_URL}/images/P2.png`]
         },
         {
             id: 3,
-<<<<<<< Updated upstream
             title: "LISP FSA Generator", 
             shortDescription: "A Python script that generates LISP code to determine if a given string is valid for a given FSA.", 
             fullDescription: "This Python script will take a given finite state automata from an input file and will use it to generate LISP code. This LISP program will then use a string taken from an input file and determine whether the string is a valid input for the given finite state automata.", 
             link: "https://github.com/megamike1440p/PLA4-Lisp-FSA-Gen", 
-            images: ["P3.png"]
-        },
-        {
-            id: 4,
-            title: "Project 4", 
-            shortDescription: "Short Description", 
-            fullDescription: "Full Description",
-            link: "https://github.com/megamike1440p/PLA4-Lisp-FSA-Gen", 
-            images: ["P4.png"]
-=======
-            title: "LISP FSA Generator",
-            shortDescription: "A Python script that generates LISP code to determine if a given string is valid for a given FSA.",
-            fullDescription: "This Python script will take a given finite state automata from an input file and will use it to generate LISP code. This LISP program will then use a string taken from an input file and determine whether the string is a valid input for the given finite state automata.",
-            link: "https://github.com/megamike1440p/PLA4-Lisp-FSA-Gen",
             images: [`${process.env.PUBLIC_URL}/images/P3.png`]
         },
         {
@@ -75,7 +60,6 @@ const ProjectList = ({ onProjectSelect }) => {
             fullDescription: "This program allows users to label and swap between multiple saves files in the game 'Elden Ring', which has a limited number of save slots. It uses a JSON file to keep track of the user's various save files, as well as which one was last used. It features two separate functions to backup user saves to two separate locations for maximum redundancy. Each time the user swaps saves, a timestamped backup with the save's chosen label is created. The latest three timestamped backups are kept in the user's chosen backup folder, and directories are created within 'Elden Ring's' save location to house the save files used for swapping.",
             link: "https://github.com/megamike1440p/ER-SaveSwap",
             images: [`${process.env.PUBLIC_URL}/images/P7-1.png`, `${process.env.PUBLIC_URL}/images/P7-2.png`]
->>>>>>> Stashed changes
         },
     ];
 
