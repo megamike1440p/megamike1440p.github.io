@@ -7,7 +7,7 @@ const ProfessionalHistory = () => {
 
     const professionalDetails = {
         "Work Center Supervisor on USS Princeton": {
-            "Position": "Work Center Supervisor - CF03",
+            "Position": "Work Center Supervisor - Fire Control Systems/400 Hz Power Conversion",
             "Duration": "Spring 2018 - Spring 2019",
             "Responsibilities": [
                 "Oversaw overall condition and operation of the Aegis MK99 Fire Control System and the MK84 60 Hz to 400 Hz Power Conversion System",
@@ -18,7 +18,7 @@ const ProfessionalHistory = () => {
             ]
         },
         "Lead Technician on USS Princeton": {
-            "Position": "Lead Technician - CF03",
+            "Position": "Lead Technician - Fire Control Systems/400 Hz Power Conversion",
             "Duration": "Spring 2017 - Spring 2018",
             "Responsibilities": [
                 "Troubleshooting and corrective maintenance of the Aegis MK99 Fire Control System and the MK84 60 Hz to 400 Hz Power Conversion System",
@@ -27,7 +27,7 @@ const ProfessionalHistory = () => {
             ]
         },
         "Maintenance Man on USS Princeton": {
-            "Position": "Maintenance Man - CF03",
+            "Position": "Maintenance Man - Fire Control Systems/400 Hz Power Conversion",
             "Duration": "Summer 2014 - Spring 2017",
             "Responsibilities": [
                 "Conducting Planned Maintenance on the MK 99 Fire Control System and the MK 84 60 Hz to 400 Hz Power Conversion System",

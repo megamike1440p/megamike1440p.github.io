@@ -13,7 +13,7 @@ const ProjectList = ({ onProjectSelect }) => {
         },
         {
             id: 2,
-            title: "Analytical Model Simulation",
+            title: "Analytical Queuing Model Simulation",
             shortDescription: "Simulates and analyzes queuing models based on user input.",
             fullDescription: "This project is an analytical model simulation designed to demonstrate the use of object-oriented design, data structures, and mathematical modeling in C++. It analyzes queuing models to calculate various metrics such as the probability of zero customers in the system, the average number of customers in the system, the average time a customer spends in the system, the average number of customers in the queue, and the average time a customer spends waiting in the queue. It handles user input, event management, and scheduling using a priority queue.",
             link: "https://github.com/megamike1440p/dsa2project2",
@@ -29,11 +29,37 @@ const ProjectList = ({ onProjectSelect }) => {
         },
         {
             id: 4,
-            title: "Project 4", 
-            shortDescription: "Short Description", 
-            fullDescription: "Full Description",
-            link: "https://github.com/megamike1440p/PLA4-Lisp-FSA-Gen", 
-            images: [`${process.env.PUBLIC_URL}/images/P4.png`]
+            title: "Best Fit Memory Allocator",
+            shortDescription: "Allocates programs listed from files to memory bins using the Best Fit strategy",
+            fullDescription: "This program implements a memory management system using a best-fit allocation strategy. It reads memory slots and process sizes from input files, then allocates the processes to the memory slots. If a process fits, it is assigned to the best-fitting slot, updating the slot's base and displacement. The current memory slot map is printed after each allocation attempt. If a process cannot be allocated, the process terminates the allocation. The program outputs the result of each allocation attempt and the final state of the memory slots.",
+            link: "https://github.com/megamike1440p/SYSNET4",
+            images: [`${process.env.PUBLIC_URL}/images/P4-1.png`, `${process.env.PUBLIC_URL}/images/P4-2.png`,
+            `${process.env.PUBLIC_URL}/images/P4-3.png`, `${process.env.PUBLIC_URL}/images/P4-4.png`,
+            ]
+        },
+        {
+            id: 5,
+            title: "Server side calculator with analytical clients",
+            shortDescription: "Server side calculator with api checker, calculation-counter, and latency-analyzer clients.",
+            fullDescription: "These python scripts provide a simple server side calculator with a history feature as well as an API endpoint which provides the history in a json format. It also has three clients: An API endpoint status checker, a calculation-counter that provides the number of calculations in the history file, and a latency analyzer that provides the latency of the API endpoint.",
+            link: "https://github.com/megamike1440p/SYSNET2-P4-PYTHON-CALC-SERVERCLIENTS",
+            images: [`${process.env.PUBLIC_URL}/images/P5-1.png`, `${process.env.PUBLIC_URL}/images/P5-2.png`, `${process.env.PUBLIC_URL}/images/P5-3.png`]
+        },
+        {
+            id: 6,
+            title: "TV Nopes",
+            shortDescription: "A javascript site for users to create lists of their least favorite shows using the TV-Maze REST API",
+            fullDescription: "TV Nopes is a javascript website built using Handlebars and CSS. It allows users to create accounts, log in, and search for TV shows by accessing the TV-Maze REST API. The shows are added to the user's \"Nope List\" which is stored in MongoDB alongside their login credentials.",
+            link: "https://github.com/megamike1440p/TV-NOPES",
+            images: [`${process.env.PUBLIC_URL}/images/P6-1.png`, `${process.env.PUBLIC_URL}/images/P6-2.png`]
+        },
+        {
+            id: 7,
+            title: "Elden Ring Save Swapper",
+            shortDescription: "GUI based Python Script which facillitates swapping between multiple saves in 'Elden Ring'",
+            fullDescription: "This program allows users to label and swap between multiple saves files in the game 'Elden Ring', which has a limited number of save slots. It uses a JSON file to keep track of the user's various save files, as well as which one was last used. It features two separate functions to backup user saves to two separate locations for maximum redundancy. Each time the user swaps saves, a timestamped backup with the save's chosen label is created. The latest three timestamped backups are kept in the user's chosen backup folder, and directories are created within 'Elden Ring's' save location to house the save files used for swapping.",
+            link: "https://github.com/megamike1440p/ER-SaveSwap",
+            images: [`${process.env.PUBLIC_URL}/images/P7-1.png`, `${process.env.PUBLIC_URL}/images/P7-2.png`]
         },
     ];
 

@@ -11,7 +11,7 @@ const EducationModal = ({ courses, onClose }) => {
 
     const handleClose = () => {
         setIsVisible(false);
-        setTimeout(onClose, 300); // Matches the duration of the fade-out transition
+        setTimeout(onClose, 300);
     };
 
     const handleOverlayClick = (e) => {

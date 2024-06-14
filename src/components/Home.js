@@ -52,7 +52,7 @@ const Home = () => {
         <div>
             <NavBar onSectionClick={handleSectionToggle} />
             <div style={{ paddingTop: `${navbarHeight}px` }}>
-                <Collapse title="About Me" id="AboutMe" isOpen={openSections['AboutMe']} onToggle={() => handleSectionToggle('AboutMe', false)}>
+                <Collapse title="About Michael Whitten" id="AboutMe" isOpen={openSections['AboutMe']} onToggle={() => handleSectionToggle('AboutMe', false)}>
                     <AboutMe />
                 </Collapse>
                 <Collapse title="Education History" id="EducationHistory" isOpen={openSections['EducationHistory']} onToggle={() => handleSectionToggle('EducationHistory', false)}>
